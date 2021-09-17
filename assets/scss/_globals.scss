@@ -14,7 +14,7 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-}
+} 
 
 h1,h2,h3,h4 {
   color: var(--title-color);
@@ -63,3 +63,31 @@ img {
   display: grid;
   gap: 1.5rem;
 }
+
+/*==================== Button ====================*/
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: 0.3s;
+  }
+
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+  }
+
+}
+
