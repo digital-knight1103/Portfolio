@@ -1,7 +1,7 @@
 // @ts-nocheck
-/*==================== MENU SHOW Y HIDDEN ====================*/
-console.log('hello');
 
+/*==================== MENU SHOW and HIDDEN ====================*/
+console.log('Witaj Kolego');
 
 const navMenu = document.querySelector('.nav__menu')
 const navToggle = document.querySelector('.nav__toggle')
@@ -12,7 +12,6 @@ const navClose = document.querySelector('.nav__close')
 /* Validate if constant exists */
 if(navToggle) {
   navToggle.addEventListener('click', () => {
-    console.log('Test');
     navMenu.classList.add('show-menu')
   })
 }
@@ -27,6 +26,8 @@ if(navClose) {
 
 
 /*==================== REMOVE MENU MOBILE ====================*/
+
+
 const navLink = document.querySelectorAll('.nav__link')
 
 const removeMenuMobile = () => {
@@ -92,18 +93,32 @@ navLink.forEach(el => el.addEventListener('click', removeMenuMobile))
 
 /*==================== SERVICES MODAL ====================*/
 const modalViews = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectoAll('.services__button'),
+      modalBtns = document.querySelectorAll('.services__button'),
       modalCloses = document.querySelectorAll('.services__modal-close')
 
-let modal = function(modalClick) {
-  modalViews[modalClick].classList.add('active-modal')
-}
 
-modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener('click', () => {
-    modal(i)
-  })
-})
+// const modalShow = () => {
+//   modalViews.classList.add('active-modal')
+// } 
+
+
+// let modal = function(modalClick) {
+//   modalViews[modalClick].classList.add('active-modal')
+// }
+
+// modalBtns.forEach((modalBtn, i) => {
+//   modalBtn.addEventListener('click', () => {
+//     modal(i)
+//   })
+// })
+
+// modalCloses.forEach((modalClose) => {
+//   modalClose.addEventListener('click', () => {
+//     modalViews.forEach((modalView) => {
+//       modalView.classList.remove('active-modal')
+//     })
+//   })
+// })
 
 
 
@@ -116,7 +131,22 @@ modalBtns.forEach((modalBtn, i) => {
 // modalBtns.forEach(btn => btn.addEventListener('click', modalShow))
 
 /*==================== PORTFOLIO SWIPER  ====================*/
+// code from demos https://swiperjs.com/ 
 
+let swiper = new Swiper(".mySwiper", {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // mousewheel: true,
+  // keyboard: true,
+});
 
 /*==================== TESTIMONIAL ====================*/
 

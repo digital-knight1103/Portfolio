@@ -1,11 +1,15 @@
-* HOME
-home__social
-https://www.linkedin.com/
-https://dribbble.com/
-https://github.com/
+* Info 
+//swipper
 
-home__description
-High level experience in web design and development knowledge, producing quality work.
+add swipper library https://swiperjs.com/
+The Most Modern Mobile Touch Slider
+
+Getting Started -> Download assets and add:
+-- swiper-bundle.min.css to css folder
+-- swiper-bundle.min.js to js folder
+
+Swipper demo in https://swiperjs.com/ with source code. 
+
 
 
 * ABOUT
