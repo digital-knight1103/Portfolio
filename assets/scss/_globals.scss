@@ -74,8 +74,19 @@ img {
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
 
+  &--white {
+    background-color: #fff;
+    color: var(--first-color);
+    transition: transform 0.3s ease-out;
+  }
+
   &:hover {
     background-color: var(--first-color-alt);
+  }
+
+  &--white:hover {
+    background-color: #fff;
+    transform: scale(1.05);
   }
 
   &__icon {

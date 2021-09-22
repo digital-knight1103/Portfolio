@@ -125,8 +125,23 @@ img {
   font-weight: var(--font-medium);
 }
 
+.button--white {
+  background-color: #fff;
+  color: var(--first-color);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
 .button:hover {
   background-color: var(--first-color-alt);
+}
+
+.button--white:hover {
+  background-color: #fff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .button__icon {
@@ -718,6 +733,7 @@ img {
 
 .portfolio__content {
   padding: 0 2rem;
+  text-align: center;
 }
 
 .portfolio__img {
@@ -764,5 +780,79 @@ img {
 
 .swiper-pagination-bullet-active {
   background-color: var(--first-color);
+}
+
+.project {
+  text-align: center;
+}
+
+.project__bg {
+  background-color: var(--first-color-second);
+  padding-top: 3rem;
+}
+
+.project__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.project__description {
+  margin-bottom: var(--mb-2);
+}
+
+.project__title, .project__description {
+  color: #fff;
+}
+
+.project__img {
+  width: 250px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial__data, .testimonial__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.testimonial__data {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: var(--mb-1);
+}
+
+.testimonial__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: var(--mb-1);
+}
+
+.testimonial__name {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.testimonial__client {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.testimonial__description {
+  margin-bottom: var(--mb-2-5);
+}
+
+.testimonial__icon-star {
+  color: var(--first-color);
+}
+
+.swiper-container .swiper-pagination-testimonial {
+  bottom: 0;
 }
 /*# sourceMappingURL=style.css.map */

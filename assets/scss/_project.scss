@@ -1,0 +1,27 @@
+.project {
+  text-align: center;
+
+  &__bg {
+    background-color: var(--first-color-second);
+    padding-top: 3rem;
+  }
+
+  &__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-1)
+  }
+
+  &__description {
+    margin-bottom: var(--mb-2);
+  }
+
+  &__title,
+  &__description {
+    color: #fff;
+  }
+
+  &__img {
+    width: 250px;
+    justify-self: center;
+  }
+}
