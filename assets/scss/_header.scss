@@ -26,7 +26,7 @@
   }
 
   &__toggle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     cursor: pointer;
   }
 
@@ -68,8 +68,44 @@
   &__close:hover {
     color: var(--first-color-alt);
   }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+  animation-name: moon;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+
+  &:hover {
+    color: var(--first-color)
+  }
+}
+
+@keyframes moon {
+  0%   {transform: rotate(0deg);}
+  25%  {transform: rotate(30deg);}
+  50%  {transform: rotate(-20deg);}
+  75%  {transform: rotate(20deg);}
+  100% {transform: rotate(0);}
 }
 
 .show-menu {
   bottom: 0 !important;
 } 
+
+
+.active-link {
+  color: var(--first-color);
+}
+
+.scroll-header {
+  background-color: var(--body-color)
+}
