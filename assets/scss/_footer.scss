@@ -1,13 +1,24 @@
 .footer {
   padding-top: 2rem;
+  position: relative;
 
   &__container {
     row-gap: 3rem;
   }
 
   &__bg {
-  background-color: var(--first-color-second);
+  // background-color: var(--first-color-second);
+  background-image: url(/assets/img/bgcolor.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 2rem 0 3rem;
+  }
+
+  &__svg {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    left: 0;
   }
 
   &__title {
@@ -47,7 +58,7 @@
   &__copy {
     font-size: var(--smaller-font-size);
     text-align: center;
-    color: var(--text-color-light);
+    color: rgb(192, 192, 192);
     margin-top: var(--mb-3);
   }
 

@@ -1,7 +1,7 @@
 .skills {
   
   &__container {
-    row-gap: 1rem;
+    row-gap: 0;
   }
 
   &__header {
@@ -9,6 +9,10 @@
     align-items: center;
     margin-bottom: var(--mb-2-5);
     cursor: pointer;
+  }
+
+  &__content {
+    margin: 1rem;
   }
 
   &__icon,
@@ -19,6 +23,14 @@
 
   &__icon {
     margin-right: var(--mb-0-75);
+  }
+
+  &__icon-min {
+    font-size: 2rem;
+  }
+
+  &__img {
+    width: 60px;
   }
 
   &__title {
@@ -32,10 +44,18 @@
 
   &__arrow {
     margin-left: auto;
+    transition: 0.4s;
+  }
+
+  &__list {
+    row-gap: 1.5rem;
+    padding-left: 0 3rem;
+    transition: 1s;
   }
 
   &__titles {
     display: flex;
+    align-items: center;
     justify-content:space-between;
     margin-bottom: var(--mb-0-5);
   }

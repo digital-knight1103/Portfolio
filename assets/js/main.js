@@ -1,4 +1,10 @@
-// @ts-nocheck
+/*==================== Preload ====================*/
+
+window.addEventListener('load', () => {
+  const preload = document.querySelector('.preload');
+  preload.classList.add('preload__finish')
+})
+
 
 /*==================== MENU SHOW and HIDDEN ====================*/
 console.log('Witaj Kolego');
@@ -24,7 +30,6 @@ if(navClose) {
   })
 }
 
-
 /*==================== REMOVE MENU MOBILE ====================*/
 
 
@@ -38,98 +43,71 @@ const removeMenuMobile = () => {
 navLink.forEach(el => el.addEventListener('click', removeMenuMobile))
 
 /*==================== ACCORDION SKILLS ====================*/
-// const skillsContent = document.getElementsByClassName('.skills__content')
-// const skillsHeader = document.querySelectorAll('.skills__header')
+const skillsContent = document.getElementsByClassName('skills__content')
+const skillsHeader = document.querySelectorAll('.skills__header')
 
 
-// function toggleSkills() {
-//   let itemClass = this.ParentNode.className
+function toggleSkills() {
+  let itemClass = this.parentNode.className
 
-//   for(let i = 0; i < skillsContent.length; i++) {
-//     skillsContent[i].className = 'skills__content skills__close'
-//   }
+  for(let i = 0; i < skillsContent.length; i++) {
+    skillsContent[i].className = 'skills__content skills__close'
+  }
 
-//   if(itemClass === 'skills__content skills__close') {
-//     this.parentNode.className = 'skills__content skills__open'
-//   }
-// }
+  if(itemClass === 'skills__content skills__close') {
+    this.parentNode.className = 'skills__content skills__open'
+  }
+}
 
-// skillsHeader.forEach((el) => {
-//   el.addEventListener('click', toggleSkills)
-// })
-
-// const skillsContent = document.querySelectorAll('.skills__content')
-
-// const toggleClass = () => {
-//   skillsContent.classList.add('qualification__open')
-// }
-
-// skillsContent.addEventListener('click', toggleClass)
-
-
+skillsHeader.forEach((el) => {
+  el.addEventListener('click', toggleSkills)
+})
 
 
 /*==================== QUALIFICATION TABS ====================*/
-// const tabs = document.querySelectorAll('[data-target]')
-// const tabContents = document.querySelector('[data-content]')
+const tabs = document.querySelectorAll('[data-target]')
+const tabContents = document.querySelectorAll('[data-content]')
 
-// tabs.forEach((tab) => {
-//   tab.addEventListener('click', () => {
-//     const target = document.querySelector(tab.dataset.target);
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.target)
 
-//     tabContents.forEach((tabContent) => {
-//       tabContent.classList.remove('qualification__active')
-//     })
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove('qualification__active')
+    })
 
-//     target.classList.add('qualification__active')
+    target.classList.add('qualification__active')
 
-//     tabs.forEach((tab) =>  {
-//       tab.classList.remove('qualification__active')
-//     })
+    tabs.forEach((tab) =>  {
+      tab.classList.remove('qualification__active')
+    })
 
-//     tab.classList.add('qualification__active')
-//   })
-// })
+    tab.classList.add('qualification__active')
+  })
+})
 
 /*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectorAll('.services__button'),
-      modalCloses = document.querySelectorAll('.services__modal-close')
+const modalViews = document.querySelectorAll('.services__modal')
+const modalBtns = document.querySelectorAll('.services__button')
+const modalCloses = document.querySelectorAll('.services__modal-close')
 
+let modal = function(modalClick) {
+  modalViews[modalClick].classList.add('active-modal')
+}
 
-// const modalShow = () => {
-//   modalViews.classList.add('active-modal')
-// } 
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener('click', () => {
+    modal(i)
+  })
+})
 
-
-// let modal = function(modalClick) {
-//   modalViews[modalClick].classList.add('active-modal')
-// }
-
-// modalBtns.forEach((modalBtn, i) => {
-//   modalBtn.addEventListener('click', () => {
-//     modal(i)
-//   })
-// })
-
-// modalCloses.forEach((modalClose) => {
-//   modalClose.addEventListener('click', () => {
-//     modalViews.forEach((modalView) => {
-//       modalView.classList.remove('active-modal')
-//     })
-//   })
-// })
-
-
-
-
-
-// let modalShow = () => {
-//   modalViews.classList.add('active-modal')
-// }
-
-// modalBtns.forEach(btn => btn.addEventListener('click', modalShow))
-
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener('click', () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove('active-modal')
+    })
+  })
+})
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 // code from demos https://swiperjs.com/ 
@@ -163,7 +141,7 @@ var swiperTestimonial = new Swiper(".testimonial__container", {
   breakpoints: {
     568: {
       slidesPerView: 2,
-    }
+    },
   }
 });
 
@@ -251,3 +229,27 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  distance: '50px',
+  duration: 2500,
+  delay: 400,
+  // reset: true
+})
+
+sr.reveal('.home__header, .section__title', {delay:300, scale: 0.8})
+sr.reveal('.section__subtitle', {delay:600, scale: 0.8})
+sr.reveal('.home__data, .about__data', {delay:400})
+sr.reveal('.home__img, .project__bg', {delay:200, origin: 'top', })
+sr.reveal('.home__social', {delay:800, origin: 'left', scale: 0.6})
+
+sr.reveal('.services__img', {delay:1000, origin: 'right', scale: 0.4})
+
+sr.reveal('.about__img, .products__card, .footer__logo, .footer__content, .footer__copy', {origin: 'top', interval: 300, scale: 0.5})
+sr.reveal('.specs__data, .discount__animate', {origin: 'left', interval: 300})
+sr.reveal('.specs__img, .discount__img', {origin: 'right'})
+
+sr.reveal('.case__img', {origin: 'top',scale: 0.8})
+sr.reveal('.case__data', {origin: 'bottom',scale: 0.9})

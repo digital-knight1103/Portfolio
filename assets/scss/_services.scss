@@ -1,4 +1,5 @@
 .services {
+  position: relative;
   &__container {
     gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
@@ -9,12 +10,13 @@
     background-color: var(--container-color);
     padding: 3.5rem 0.5rem 1rem 2rem;
     border-radius: 0.6rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    transition: 0.3s;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 1.0px 2.4px 2.4px rgba(0, 0, 0, 0.47);
+    transition: 0.6s;
   }
 
   &__content:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
+    box-shadow: 8.0px 16.0px 16.0px rgba(0, 0, 0, 0.25);
   }
 
   &__icon {
@@ -91,9 +93,27 @@
     color: var(--first-color);
     margin-right: var(--mb-0-5);
   }
+
+  &__img {
+    position: absolute;
+    width: 300px;
+    left: -130px;
+    bottom: 5px;
+    transform: rotate(15deg);
+    animation: showknight 2s infinite alternate; 
+  }
 }
 
 .active-modal {
   opacity: 1;
   visibility: visible;
+}
+
+@keyframes showknight {
+    0% {
+      transform: rotate(16deg) scale(1);
+    }
+    100% {
+      transform: rotate(14deg) scale(1.04);
+    }
 }

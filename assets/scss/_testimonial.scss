@@ -5,6 +5,10 @@
     display: flex;
   }
 
+  &__container {
+    overflow: hidden;
+  }
+
   &__data {
     justify-content: space-between;
     margin-bottom: var(--mb-1);

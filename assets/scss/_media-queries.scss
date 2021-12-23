@@ -124,6 +124,7 @@
   .home {
     &__content {
       grid-template-columns: max-content 1fr 1fr;
+      padding-top: 3.5rem;
     }
 
     &__title {
@@ -170,6 +171,10 @@
   .project {
     &__container {
       grid-template-columns: 1fr 1fr
+    }
+
+    &__bg {
+      margin: 0 30px;
     }
   }
 
@@ -218,6 +223,7 @@
 
     &__container{
       row-gap: 5rem;
+      height: 70vh;
     }
     &__content {
       padding: 2rem;
@@ -260,8 +266,21 @@
       row-gap: 2rem;
     }
 
+    &__link {
+      flex-direction: row;
+    }
+
     &__menu {
       margin-left: auto;
+    }
+
+    &__number {
+      display: flex;
+      margin-right: 5px;
+      color: var(--first-color);
+      font-size: 0.6rem;
+      transform: translateY(3px);
+
     }
   }
 
@@ -274,6 +293,7 @@
 
     &__img {
       width: 350px;
+      
     }
 
     &__description {
@@ -390,5 +410,102 @@
     &__blob {
       width: 350px;
     }
+
+    &__social {
+      transform: translateX(-6rem);
+    }
+
+    &__animation {
+      display: block;
+    }
+
+    &__bar{
+      display: block;
+    }
+  }
+
+  .portfolio {
+    &__content {
+      column-gap: 5rem;
+    }
+  }
+
+  .swiper {
+    &-button-prev {
+      top: 70%;
+      left: 2rem;
+    }
+  
+    &-button-next {
+      top: 70%;
+      right: 2rem;
+    }
+
+    .project {
+      &__bg {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// Extra large ≥1200px
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .skills {
+    display: grid;
+    &__container {
+      margin: 0 auto;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 2rem;
+    }
+
+    &__content {
+      padding: 2rem;
+    }
+
+    &__icon {
+      font-size: 2.5rem;
+      margin-right: var(--mb-1-5);
+    }
+  }
+  
+  .services {
+
+    &__container {
+      grid-template-columns: 250px 250px 250px;
+      justify-content: center;
+    }
+
+    &__icon {
+      font-size: 2.5rem;
+    }
+
+    &__modal-content{
+
+    }
+  }
+
+  .footer {
+    &__title {
+      font-size: var(--h3-font-size);
+    }
+
+    &__links {
+      
+    }
+  }
+
+}
+
+
+// Extra extra large   ≥1400px
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1020px;
   }
 }

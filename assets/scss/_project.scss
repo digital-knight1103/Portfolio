@@ -1,12 +1,17 @@
 .project {
   text-align: center;
-  background-image: url(/assets/img/armour.jpg);
-  background-size: cover;
+  // background-image: url(/assets/img/bgcolor.svg);
+  // background-size: cover;
+  display: flex;
+  justify-content: center;
 
 
   &__bg {
     // background-color: var(--first-color-second);
-  
+    max-width: 1000px;
+    background-image: url(/assets/img/bgcolor.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
     padding-top: 3rem;
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
@@ -28,9 +33,10 @@
   &__description {
     color: #fff;
   }
-
+  
   &__img {
     width: 250px;
     justify-self: center;
+    transition: transform 1s;
   }
 }
