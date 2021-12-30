@@ -1,0 +1,12 @@
+* Info 
+//swipper
+
+add swipper library https://swiperjs.com/
+The Most Modern Mobile Touch Slider
+
+Getting Started -> Download assets and add:
+-- swiper-bundle.min.css to css folder
+-- swiper-bundle.min.js to js folder
+
+Swipper demo in https://swiperjs.com/ with source code. 
+

@@ -1,0 +1,25 @@
+{
+  "name": "10_portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Digital_Knight",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-knight1103/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digital-knight1103/Portfolio/issues"
+  },
+  "homepage": "https://github.com/digital-knight1103/Portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0"
+  }
+}
